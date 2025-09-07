@@ -1,0 +1,121 @@
+.board-invite-member {
+  background-color: rgba(0, 0, 0, 0.221);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  grid-column: 1 / -1;
+
+  .invite-member-modal {
+    position: relative;
+    z-index: 30;
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    color: var(--clr-txt);
+    background-color: white;
+    border-radius: .5em;
+    box-shadow: var(--box-shadow-high);
+    padding: 32px 32px 50px 32px;
+
+    .btn-close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+
+    .title {
+      align-self: flex-start;
+      margin-bottom: 30px;
+      font-size: 25px;
+    }
+
+    .username-not-found {
+      background: #d6edff;
+      padding: 8px 16px;
+      font-size: 15px;
+      border-radius: 4px;
+      gap: 16px;
+      margin-bottom: 15px;
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          width: 18px;
+          height: 18px;
+
+          path:last-child {
+            stroke-width: 1px;
+          }
+        }
+      }
+
+      .msg {
+        font-family: roboto-light;
+        font-weight: 300;
+        line-height: 15px;
+      }
+
+    }
+
+    .form-member-search {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .input-username {
+        padding: 5px;
+        height: 33px;
+        border-radius: 0.2em;
+        border: none;
+        outline: 1px solid var(--clr-disabled);
+        margin-bottom: 40px;
+
+        &:focus {
+          outline: 1px solid var(--clr-btn-highlight);
+        }
+      }
+    }
+
+    .member-preview {
+      margin-bottom: 20px;
+
+      .member-info {
+        gap: 10px;
+
+        .profile-img-icon {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .admin-indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: var(--clr-icon-svg);
+
+        &.admin {
+          background-color: var(--clr-btn-highlight);
+        }
+
+        svg {
+          width: 14px;
+          height: 14px;
+          fill: white;
+        }
+      }
+    }
+  }
+}

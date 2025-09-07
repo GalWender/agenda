@@ -1,0 +1,14 @@
+.board-list {
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+
+    @media (max-width: 840px) {
+        justify-content: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

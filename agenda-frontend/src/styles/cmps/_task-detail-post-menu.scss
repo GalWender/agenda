@@ -1,0 +1,24 @@
+.task-detail-post-menu {
+    position: absolute;
+    width: 265px;
+    font-size: 14px;
+    height: fit-content;
+    background-color: var(--clr-item-bg);
+    padding: 10px;
+    box-shadow: var(--box-shadow-small);
+    border-radius: 8px;
+    translate: 365px 30px;
+    .btn-trash-post>svg {
+        margin-right: 5px;
+    }
+
+    .btn-trash-post {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .btn-trash-post:hover {
+        background-color: #dcdfec;
+        border-radius: 4px;
+    }
+}

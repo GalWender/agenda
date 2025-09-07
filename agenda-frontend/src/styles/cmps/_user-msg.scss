@@ -1,0 +1,38 @@
+.user-msg {
+  position: fixed;
+  top: 10px;
+  right: 50%;
+  translate: 50%;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  color: var(--clr-item-bg);
+  border-radius: 0.3em;
+  gap: 10px;
+  z-index: 100;
+
+  button {
+    color: var(--clr-item-bg);
+  }
+
+  &.success {
+    background-color: #25874f;
+  }
+
+  &.error {
+    background-color: #d83a52;
+  }
+
+  .btn-close-user-msg {
+    border-radius: 0.3em;
+    padding: 4px;
+
+    svg *{
+      stroke: white;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.266)
+    }
+  }
+}

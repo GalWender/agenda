@@ -1,0 +1,69 @@
+.empty-workspace {
+  /* Ensure we render in the main content column next to the side nav */
+  grid-column: 2;
+  display: grid;
+  place-items: center; /* centers child both horizontally and vertically */
+  min-height: 100vh;
+  width: 100%;
+  padding: 3rem clamp(24px, 4vw, 56px); /* give breathing room from edges */
+  text-align: center;
+  color: var(--text-clr, #333);
+  /* Fallback offset if grid placement is not applied in some nested trees */
+  //   margin-left: calc(var(--board-grid-column));
+  box-sizing: border-box;
+
+  .empty-hero {
+    justify-self: center; /* make sure the card itself is centered */
+    width: 100%;
+    max-width: 780px; /* slightly wider so it stands out */
+    background: #fff;
+    border: 1px solid #e6e9ef;
+    border-radius: 12px;
+    padding: 2.25rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin: 0 0 0.5rem;
+  }
+
+  p {
+    margin: 0 0 1.5rem;
+    color: #6b7280;
+  }
+
+  .actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .btn {
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 120ms ease, box-shadow 120ms ease;
+  }
+
+  .btn.primary {
+    background: #0073ea;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 115, 234, 0.25);
+  }
+
+  .btn.primary:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn.secondary {
+    background: #f3f4f6;
+    color: #374151;
+  }
+
+  .btn.secondary:hover {
+    transform: translateY(-1px);
+  }
+}

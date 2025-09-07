@@ -1,0 +1,85 @@
+:root {
+    //priority
+    --clr-critical: #333333;
+    --clr-medium: #5559df;
+    --clr-high: #401694;
+    --clr-low: #579bfc;
+
+    // status
+    --clr-pending: #ad967a;
+    --clr-waiting: #784bd1;
+    --clr-stuck: #e2445c;
+    --clr-help: #ffcb00;
+    --clr-done: #00c875;
+    --clr-workingOnIt: #fdab3d;
+    --clr-empty: #c4c4c4;
+
+    //status colors
+    --status-clr1: #037f4c;
+    --status-clr2: #00c875;
+    --status-clr3: #9cd326;
+    --status-clr4: #cab641;
+    --status-clr5: #ffcb00;
+    --status-clr6: #784bd1;
+    --status-clr7: #a25ddc;
+    --status-clr8: #579bfc;
+    --status-clr9: #66ccff;
+    --status-clr10: #e2445c;
+    --status-clr11: #ff158a;
+    --status-clr12: #ff5ac4;
+    --status-clr13: #ff642e;
+    --status-clr14: #fdab3d;
+    --status-clr15: #7f5347;
+    --status-clr16: #c4c4c4;
+    --status-clr17: #808080;
+    // --status-clr18: #81b6c5;
+    // --status-clr19: #946556;
+    // --status-clr20: #225db5;
+    // --status-clr21: #12484f;
+    // --status-clr22: #9685c5;
+    // --status-clr23: #8798ba;
+    // --status-clr24: #7e7a94;
+    // --status-clr25: #453232;
+    // --status-clr26: #dc143c;
+
+    // backgrounds
+    --clr-item-bg: #ffffff;
+    --clr-bg: #f6f7fb;
+    --clr-bg-navbar: #292f4c;
+
+    //main
+    --clr-logo-green: #4eb648;
+    --clr-logo-yellow: #ffcb04;
+    --clr-logo-red: #ee425a;
+    --clr-txt: #151414;
+    --clr-txt-asphalt: #676879;
+    --clr-icon-svg: #5a5a5a;
+    --clr-logo-txt: #333333;
+    --clr-home-btn: #5a5ad5;
+
+    // timeline progress bar
+    --clr-progress-bar: #a25ddc;
+
+    --clr-disabled: #e2e2e2;
+    --task-preview-hover: 255, 255, 255;
+    --clr-disabled-permenent: #d6d4d4;
+    --task-text-color: #323338;
+
+    // btns
+
+    --clr-btn-bg-highlight-hover: #0060b9;
+    --clr-btn-bg-hover: #dcdfec;
+    --clr-btn-highlight: #0073ea;
+
+    // miscellaneous
+    --box-shadow-xs: 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --box-shadow-small: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    --box-shadow-medium: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    --box-shadow-large: 0px 15px 50px rgba(0, 0, 0, 0.3);
+
+    --box-shadow-high: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    --box-shadow-header: 0px 10px 15px rgba(57, 125, 251, 0.123);
+
+    //layout
+    --board-grid-column: 66px;
+}

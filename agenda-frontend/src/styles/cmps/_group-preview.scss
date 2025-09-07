@@ -1,0 +1,29 @@
+.group-preview{
+  margin-bottom: 10px;
+}
+
+.group-preview, .board-preview, .my-work {
+  .group-header-color {background-color: var(--clr-disabled);}
+  .task-add-group-color{background-color: var(--clr-disabled); filter:opacity(50%);}
+  .group-content-header-color{background-color: var(--clr-disabled);}
+  .task-preview-group-color{background-color: var(--clr-disabled);}
+  .undefined,.no-background{color: #ababab; *{fill: #ababab}}
+  .clr1{background-color: var(--status-clr1); color: var(--status-clr1); *{fill: var(--status-clr1);}}
+  .clr2{background-color: var(--status-clr2); color: var(--status-clr2); *{fill: var(--status-clr2);}}
+  .clr3{background-color: var(--status-clr3); color: var(--status-clr3); *{fill: var(--status-clr3);}}
+  .clr4{background-color: var(--status-clr4); color: var(--status-clr4); *{fill: var(--status-clr4);}}
+  .clr5{background-color: var(--status-clr5); color: var(--status-clr5); *{fill: var(--status-clr5);}}
+  .clr6{background-color: var(--status-clr6); color: var(--status-clr6); *{fill: var(--status-clr6);}}
+  .clr7{background-color: var(--status-clr7); color: var(--status-clr7); *{fill: var(--status-clr7);}}
+  .clr8{background-color: var(--status-clr8); color: var(--status-clr8); *{fill: var(--status-clr8);}}
+  .clr9{background-color: var(--status-clr9); color: var(--status-clr9); *{fill: var(--status-clr9);}}
+  .clr10{background-color: var(--status-clr10); color: var(--status-clr10); *{fill: var(--status-clr10);}}
+  .clr11{background-color: var(--status-clr11); color: var(--status-clr11); *{fill: var(--status-clr11);}}
+  .clr12{background-color: var(--status-clr12); color: var(--status-clr12); *{fill: var(--status-clr12);}}
+  .clr13{background-color: var(--status-clr13); color: var(--status-clr13); *{fill: var(--status-clr13);}}
+  .clr14{background-color: var(--status-clr14); color: var(--status-clr14); *{fill: var(--status-clr14);}}
+  .clr15{background-color: var(--status-clr15); color: var(--status-clr14); *{fill: var(--status-clr15);}}
+  .clr16{background-color: var(--status-clr16); color: var(--status-clr16); *{fill: var(--status-clr16);}}
+  .clr17{background-color: var(--status-clr17); color: var(--status-clr17); *{fill: var(--status-clr17);}}
+  .no-background{background-color: transparent;}
+}

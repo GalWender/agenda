@@ -1,0 +1,59 @@
+.task-preview-attachments {
+    position: relative;
+    cursor: pointer;
+
+    .img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+    }
+
+    .import-img-input {
+        width: 100%;
+     
+        cursor: pointer;
+        opacity: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    .file-img {
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+        cursor: pointer;
+        transition: all .3s ease-out;
+        
+        // &:hover {
+        //     transition-delay: .6s;
+        //     scale: 6;
+        //     translate: -50px;
+        //     position: absolute;
+        //     z-index: 10;
+        //     padding: 2px;
+        //     background-color: white;
+        //     box-shadow: 0px 0px 4px 1px #00000049;
+        //     border-radius: 0.15em;
+        // }
+    }
+
+    &:hover {
+        .add-file-btn {
+            display: flex;
+        }
+    }
+
+    .add-file-btn {
+        display: none;
+        cursor: pointer;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+    }
+}

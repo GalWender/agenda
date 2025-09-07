@@ -1,0 +1,49 @@
+.task-preview-timeline {
+    padding: 0 8px;
+    font-family: roboto;
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 400;
+    color: white;
+    gap: 4px;
+    min-width: 160px;
+
+    .clr13 {
+        background-color: var(--status-clr13);
+        color: var(--status-clr13);
+
+        * {
+            fill: var(--status-clr13);
+        }
+    }
+
+    .timeline-wrapper {
+        position: relative;
+        width: 100%;
+        height: 65%;
+        gap: 4px;
+        border-radius: 2em;
+        overflow: hidden;
+
+        .background-time-progress-bar {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            background-color: black;
+        }
+
+        .time-progress-bar {
+            position: absolute;
+            left: 0;
+            height: 100%;
+
+            &.undefined {
+                background-color: #5a5a5a;
+            }
+        }
+
+        .dates {
+            position: absolute;
+        }
+    }
+}

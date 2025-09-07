@@ -1,0 +1,9 @@
+.date-picker {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  background-color: white;
+  box-shadow: var(--box-shadow-medium);
+  z-index: 20;
+}

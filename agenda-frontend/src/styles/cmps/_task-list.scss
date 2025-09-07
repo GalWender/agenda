@@ -1,0 +1,32 @@
+.task-list {
+    display: flex;
+    flex-direction: column;
+
+
+    .task-preview-container {
+        display: flex;
+
+        .btn-task-menu {
+            justify-content: center;
+            background-color: white;
+            position: absolute;
+            left: -38px;
+            width: 38px;
+            height: 37px;
+
+            svg {
+                opacity: 0;
+                width: 20px;
+                height: 20px;
+
+                @media (max-width: 450px) {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:hover .btn-task-menu svg {
+            opacity: 1;
+        }
+    }
+}

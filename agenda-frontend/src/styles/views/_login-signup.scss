@@ -1,0 +1,361 @@
+.login-signup {
+    * {
+        font-family: roboto-light;
+    }
+
+    .main-header {
+        width: 100%;
+        margin-bottom: 75px;
+        padding: 0px 14px;
+        display: block;
+        padding-top: 5px;
+        padding-left: 18px;
+        border-bottom: 1px solid #e0e0e0;
+        height: 65px;
+        background: #f7f7f7;
+    }
+
+    .form-user-login-signup {
+        gap: 4px;
+        margin: 0 auto;
+        margin-bottom: 32px;
+        width: 360px;
+
+        .label-username {
+            font-family: roboto-medium;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .input {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            padding: 6px 12px;
+            font-size: 16px;
+            color: #555;
+            outline: none;
+        }
+
+        .btn-next {
+            width: 100%;
+            min-width: 100%;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 28px;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            background-color: var(--clr-btn-highlight);
+            color: #fff;
+            gap: 11px;
+            font-family: roboto;
+
+            svg * {
+                fill: white;
+            }
+        }
+    }
+
+    .login-signup-separator {
+
+        h2 {
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+
+    .btn-login-google {
+        padding: 12px 16px;
+        border-radius: 4px;
+        gap: 8px;
+        margin-bottom: 32px;
+
+        .img {
+            width: 16px;
+        }
+    }
+
+    .suggest-signup {
+        .suggest-signup-prefix {
+            padding-right: 5px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .signup {
+        background-image: url("https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-background.png");
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        font-family: Roboto, helvetica;
+
+        .signup-split-container {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            max-width: 840px;
+            height: 535px;
+            border-radius: 1rem;
+            background-color: white;
+
+            .signup-content-wrapper {
+                // flex: 1;
+                // padding: 48px 56px;
+                padding: 48px 0;
+                margin: 0 auto;
+                position: relative;
+
+                .signup-content {
+                    max-width: 360px;
+                    margin: 0 auto;
+
+                    .signup-titles {
+                        .title {
+                            font-family: roboto-medium;
+                            font-size: 24px;
+                            color: var(--task-text-color);
+                            margin-bottom: 8px;
+                        }
+
+                        .sub-title {
+                            font-family: roboto;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 26px;
+                            color: var(--clr-txt-asphalt);
+                            margin-bottom: 33px;
+                        }
+                    }
+
+                    .form-user-login-signup {
+
+                        .label {
+                            font-family: roboto;
+                            font-size: 15px;
+                        }
+
+                        .label-username {
+                            margin-bottom: 12px;
+                        }
+
+                        .input-username {
+                            height: 38px;
+
+                            // margin-bottom: 20px;
+                            &.error {
+                                border: 1px solid #d83a52;
+                            }
+                        }
+
+
+                        .mail-error {
+                            opacity: 0;
+                            font-family: roboto;
+                            font-size: 14px;
+                            color: #e2445c;
+
+                            &.error {
+                                opacity: 1;
+                            }
+                        }
+
+                        .label.valid-mail {
+                            margin-bottom: 4px;
+                        }
+
+                        .input.valid-mail {
+                            margin-bottom: 29px;
+                            height: 36px;
+                        }
+
+
+                        .btn-next {
+                            height: 40px;
+                        }
+                    }
+
+                    .login-signup-separator {
+                        margin-bottom: 16px;
+
+                        h2 {
+                            margin-inline: 7px;
+                        }
+
+                        .separator-line {
+                            width: 100%;
+                            border-bottom: 0.5px solid #c5c7d0;
+                            margin: 0;
+                        }
+                    }
+
+                    .btn-login-google {
+                        width: 100%;
+                        justify-content: center;
+                        border: 1px solid #4285f4;
+
+                        span {
+                            font-family: roboto;
+                            font-size: 16px;
+                            color: #4285f4;
+                        }
+                    }
+
+                    .suggest-signup {
+                        text-align: center;
+
+                        * {
+                            font-family: roboto;
+                        }
+
+                        a {
+                            color: #0073ea;
+                        }
+                    }
+                }
+            }
+
+            .side-img-wrapper {
+                width: 262px;
+
+                @media (max-width: 700px) {
+                    display: none;
+                }
+
+                .img-container {
+                    height: 100%;
+
+                    .img {
+                        width: 262px;
+                        height: 100%;
+                    }
+                }
+
+                .side-text-wrapper {
+                    margin: 0 auto;
+                    position: relative;
+                    font-weight: 300;
+                    color: white;
+                    bottom: 90px;
+                    text-align: center;
+                    width: 200px;
+                }
+            }
+
+        }
+    }
+
+    .login {
+
+        .title {
+            font-family: roboto-thin;
+            font-size: 40px;
+            font-weight: 100;
+            margin-bottom: 32px;
+
+            @media (max-width: 800px) {
+                text-align: center;
+            }
+        }
+
+        .username-not-found {
+            width: 360px;
+            background: #d6edff;
+            padding: 8px 16px;
+            font-size: 15px;
+            border-radius: 4px;
+            gap: 16px;
+            margin-bottom: 15px;
+
+            .icon svg {
+                width: 18px;
+                height: 18px;
+
+                path:last-child {
+                    stroke-width: 1px;
+                }
+            }
+
+            .not-found-txt {
+                gap: 5px;
+
+                .msg {
+                    font-family: roboto-light;
+                    font-weight: 300;
+                    line-height: 15px;
+                }
+
+                a {
+                    font-family: roboto-medium;
+                    font-weight: 500;
+                    line-height: 15px;
+                    color: #333;
+                }
+            }
+        }
+
+        .form-user-login-signup {
+            text-align: center;
+
+            .input-username {
+                height: 40px;
+                margin-bottom: 16px;
+            }
+
+            .btn-next {
+                height: 48px;
+
+                svg * {
+                    fill: white;
+                }
+            }
+        }
+
+        .login-signup-separator {
+            margin-bottom: 32px;
+
+            .separator-line {
+                border: .5px solid #c5c7d0;
+                width: 200px;
+                margin: 16px;
+
+                @media (max-width: 800px) {
+                    width: 140px;
+                }
+
+                @media (max-width: 450px) {
+                    width: 100px;
+                }
+            }
+        }
+
+        .btn-login-google {
+            border: 1px solid #c5c7d0;
+
+            span {
+                font-family: tahoma;
+                font-size: 14px;
+            }
+        }
+
+        .suggest-signup {
+
+            a {
+                color: #0fa2e2;
+            }
+        }
+    }
+}

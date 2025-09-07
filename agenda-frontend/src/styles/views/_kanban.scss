@@ -1,0 +1,343 @@
+.kanban {
+    grid-column: 2;
+
+    @media (max-width: 450px) {
+        overflow-y: hidden;
+        height: calc(100vh - 66px);
+    }
+
+    .board-header {
+        padding-inline-start: 40px;
+        width: calc(100vw - var(--board-grid-column));
+        
+        @media (max-width: 450px) {
+            padding-inline-start: 15px;
+            width: calc(100vw - 22px);
+        }
+    }
+
+    .kanban-container {
+        display: flex;
+        position: relative;
+        top: 181px;
+        display: flex;
+        padding-inline-start: 35px;
+        gap: 16px;
+        flex-wrap: nowrap;
+        padding: 30px;
+
+        @media (max-width: 450px) {
+            padding: 0 15px;
+        }
+    }
+
+    .kanban-group-preview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 260px;
+        min-height: 220px;
+        height: fit-content;
+        padding-inline-start: 5px;
+        padding-top: 10px;
+        border-radius: 0.4em;
+        max-height: calc(100vh - 240px);
+
+        @media (max-width: 450px) {
+            min-height: initial;
+            height: fit-content;
+            max-height: calc(100vh - 260px);
+        }
+
+
+        .kanban-group-add-item {
+            background-color: var(--clr-bg);
+            width: 100%;
+            padding-block: 10px;
+            padding-inline-start: 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        &.undefined {
+            background-color: #ababab;
+        }
+
+        h3 {
+            color: white;
+            padding-bottom: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .kanban-task-list {
+        background-color: var(--clr-bg);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-inline: 8px;
+        padding-block: 8px;
+        overflow-y: scroll;
+
+        @media (max-width: 450px) {
+            height: calc(100vh - 66px);
+        }
+
+        .kanban-task-preview {
+            position: relative;
+            background-color: var(--clr-item-bg);
+            box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.244);
+            padding: 5px;
+            border-radius: 0.4em;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--status-clr17);
+
+            .task-status-menu {
+                flex-direction: column;
+                translate:20px 80px;
+            }
+
+            .task-priority-menu {
+                translate:35px 110px;
+            }
+
+            .kanban-img-item {
+                width: 100%;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                    height: 55px;
+                    object-fit: cover;
+                }
+            }
+
+            .kanban-task-item {
+                display: flex;
+                justify-content: space-between;
+
+                .with-comments-container {
+                    position: relative;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, 30spx);
+
+                    span {
+                        position: absolute;
+                        color: white;
+                        right: 0px;
+                        bottom: 0px;
+                        font-size: 10px;
+                        width: 12px;
+                        height: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: var(--clr-btn-highlight);
+                        border-radius: 50%;
+                        padding: 1px;
+                    }
+
+                    svg * {
+                        fill: var(--clr-btn-highlight);
+                    }
+                }
+
+
+                h6 {
+                    font-size: 13px;
+                }
+
+                .svg-chat {
+                    width: 23px;
+                    cursor: pointer;
+
+                    &:hover {
+                        * {
+                            fill: var(--clr-btn-highlight);
+                        }
+                    }
+                }
+
+                * {
+                    fill: #ababab;
+                }
+            }
+
+            .item-category {
+                display: flex;
+                align-items: center;
+                font-size: 13px;
+            }
+
+            .svg-menu {
+                width: 12px;
+                height: 12px;
+                margin-inline-end: 5px;
+                stroke: black;
+                stroke-width: 5;
+
+                rect {
+                    fill: transparent;
+                    stroke: black;
+                    margin-bottom: 3px;
+                }
+            }
+
+            .card {
+                width: 140px;
+                max-width: 140px;
+                min-width: 0;
+                height: 34px;
+                color: white;
+                font-family: roboto-medium;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+
+            .kanban-timeline {
+                padding: 0 0;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                background-color: var(--clr-disabled);
+                width: 220px;
+                height: 33px;
+
+                .timeline-wrapper {
+                    width: 140px;
+                    height: 70%;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    width: 90%;
+                }
+            }
+
+
+            .Workingonit {
+                background-color: var(--clr-workingOnIt);
+            }
+
+            .Stuck {
+                background-color: var(--clr-stuck);
+            }
+
+            .Done {
+                background-color: var(--clr-done);
+            }
+
+            .WaitingforQA {
+                background-color: var(--clr-waiting);
+            }
+
+            .Needhelp {
+                background-color: var(--clr-help);
+            }
+
+            .Pending {
+                background-color: var(--clr-pending);
+            }
+
+            .Critical {
+                background-color: var(--clr-critical);
+            }
+
+            .Medium {
+                background-color: var(--clr-medium);
+            }
+
+            .High {
+                background-color: var(--clr-high);
+            }
+
+            .Low {
+                background-color: var(--clr-low);
+            }
+
+            .empty {
+                background-color: var(--clr-empty);
+            }
+
+        }
+    }
+
+
+    .clr1 {
+        background-color: var(--status-clr1)
+    }
+
+    .clr2 {
+        background-color: var(--status-clr2)
+    }
+
+    .clr3 {
+        background-color: var(--status-clr3)
+    }
+
+    .clr4 {
+        background-color: var(--status-clr4)
+    }
+
+    .clr5 {
+        background-color: var(--status-clr5)
+    }
+
+    .clr6 {
+        background-color: var(--status-clr6)
+    }
+
+    .clr7 {
+        background-color: var(--status-clr7)
+    }
+
+    .clr8 {
+        background-color: var(--status-clr8)
+    }
+
+    .clr9 {
+        background-color: var(--status-clr9)
+    }
+
+    .clr10 {
+        background-color: var(--status-clr10)
+    }
+
+    .clr11 {
+        background-color: var(--status-clr11)
+    }
+
+    .clr12 {
+        background-color: var(--status-clr12)
+    }
+
+    .clr13 {
+        background-color: var(--status-clr13)
+    }
+
+    .clr14 {
+        background-color: var(--status-clr14)
+    }
+
+    .clr15 {
+        background-color: var(--status-clr15)
+    }
+
+    .clr16 {
+        background-color: var(--status-clr16)
+    }
+
+    .clr17 {
+        background-color: var(--status-clr17)
+    }
+}

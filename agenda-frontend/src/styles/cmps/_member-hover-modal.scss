@@ -1,0 +1,43 @@
+.member-hover-modal {
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    box-shadow: var(--box-shadow-medium);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 110px;
+    gap: 15px;
+    translate: -70px -115px;
+    animation: img-hover 0.2s linear;
+
+    .profile-img-icon-hover {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .name {
+        font-size: 18px;
+    }
+
+}
+
+@keyframes img-hover {
+    from {
+        translate: -30px -40px;
+        scale: 0;
+    }
+
+    to {
+        scale: 1;
+        translate: -70px -115px;
+    }
+
+}

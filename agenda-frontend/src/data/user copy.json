@@ -1,0 +1,149 @@
+[
+  {
+    "_id": "632476e04e46cdabedb1b1e0",
+    "fullname": "Gal Werner",
+    "username": "gal@werner.com",
+    "password": "gal",
+    "imgUrl": "profile-img-gal",
+    "assignments": [
+      {
+        "id": "a101",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "6GcnqY"
+      },
+      {
+        "id": "a102",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "JooqqA"
+      },
+      {
+        "id": "a103",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "woFH9w"
+      },
+      {
+        "id": "a103",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "xc4QYw"
+      },
+      {
+        "id": "a103",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "LpuFi9"
+      },
+      {
+        "id": "a103",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "LTOP3z"
+      },
+      {
+        "id": "a103",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "HdzYV1"
+      },
+      {
+        "id": "a103",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "M4qCwx"
+      },
+      {
+        "id": "a103",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "Su8fOZ"
+      }
+    ]
+  },
+  {
+    "_id": "632476e04e46cdabedb1b1e1",
+    "fullname": "Or Agami",
+    "username": "or@agami.com",
+    "password": "agami",
+    "imgUrl": "profile-img-or",
+    "assignments": [
+      {
+        "id": "a101",
+        "boardId": "63272d891a6634c9544c967d",
+        "taskId": "c104"
+      },
+      {
+        "id": "a102",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "6GcnqY"
+      },
+      {
+        "id": "a103",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "JooqqA"
+      },
+      {
+        "id": "a104",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "woFH9w"
+      },
+      {
+        "id": "a104",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "xc4QYw"
+      },
+      {
+        "id": "a104",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "LpuFi9"
+      },
+      {
+        "id": "a104",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "LTOP3z"
+      },
+      {
+        "id": "a103",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "HdzYV1"
+      },
+      {
+        "id": "a103",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "ggpA9r"
+      }
+    ]
+  },
+  {
+    "_id": "632476e04e46cdabedb1b1e2",
+    "fullname": "Tal Ben Atiya",
+    "username": "tal@benatiya.com",
+    "password": "tal",
+    "imgUrl": "profile-img-tal",
+    "assignments": [
+      {
+        "id": "a101",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "6GcnqY"
+      },
+      {
+        "id": "a102",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "JooqqA"
+      },
+      {
+        "id": "a103",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "woFH9w"
+      },
+      {
+        "id": "a103",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "xc4QYw"
+      },
+      {
+        "id": "a103",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "LpuFi9"
+      },
+      {
+        "id": "a103",
+        "boardId": "63272d891a6634c9544c967e",
+        "taskId": "55BKFX"
+      }
+    ]
+  }
+]

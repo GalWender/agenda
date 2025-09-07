@@ -1,0 +1,29 @@
+.user-menu {
+    position: absolute;
+    bottom: 15px;
+    left: 70px;
+    width: 230px;
+    font-size: 14px;
+    height: fit-content;
+    background-color: var(--clr-item-bg);
+    padding: 10px;
+    box-shadow: var(--box-shadow-medium);
+    border-radius: 8px;
+    z-index: 12;
+
+    .btn-logout:hover {
+        background-color: var(--clr-btn-bg-hover);
+    }
+
+    .btn-logout {
+        justify-content: flex-start;
+        width: 205px;
+        height: 30px;
+        padding: 4px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        gap: 10px;
+        text-decoration: none;
+        color: var(--clr-txt);
+    }
+}

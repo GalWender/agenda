@@ -1,0 +1,20 @@
+.group-list {
+    .add-group-btn {
+        margin-left: 3px;
+        height: 35px;
+        width: fit-content;
+        font-size: 14px;
+        color: var(--task-text-color);
+        padding: 10px;
+        border: 1px solid var(--clr-disabled-permenent);
+        border-radius: 4px;
+        margin-top: 70px;
+        &:hover {
+            background-color: var(--clr-btn-bg-hover);
+        }
+
+        svg {
+            margin-right: 10px;
+        }
+    }
+}

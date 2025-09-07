@@ -1,0 +1,177 @@
+.app-home {
+    background-color: #f5f6fa;
+    grid-column: 2;
+    overflow-x: auto;
+    min-height: 100vh;
+
+    .arrow-down {
+        cursor: pointer;
+        transform: rotate(-270deg);
+    }
+
+    .main-panel-container {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border-radius: 8px;
+        background-color: var(--clr-item-bg);
+        box-shadow: var(--box-shadow-medium);
+        height: fit-content;
+        margin-inline: 20px;
+        margin-bottom: 40px;
+
+        @media (max-width: 600px) {
+            margin-inline: 10px;
+        }
+
+        .app-home-myboards {
+            margin: 24px;
+
+            @media (max-width: 600px) {
+                margin: 10px;
+                margin-bottom: 40px;
+            }
+
+            .app-home-myboards-header {
+                margin: 24px;
+                margin-bottom: 40px;
+                display: flex;
+                align-items: center;
+            }
+
+            h1 {
+                font-family: sofia-pro;
+                font-size: 18px;
+                font-weight: 700;
+                font-weight: bold;
+                margin-left: 3px;
+            }
+
+            .arrow-down.open {
+                transform: rotate(0deg);
+            }
+        }
+
+        .app-home-recent {
+            margin: 24px;
+
+            @media (max-width: 600px) {
+                margin: 10px;
+            }
+
+            .app-home-recent-header {
+                margin: 24px;
+                margin-bottom: 40px;
+                display: flex;
+                align-items: center;
+
+
+                h1 {
+                    font-family: sofia-pro;
+                    font-size: 18px;
+                    font-weight: 700;
+                    font-weight: bold;
+                    margin-left: 3px;
+                }
+
+                .arrow-down.open {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+
+        .app-home-inbox {
+            margin: 24px;
+
+            @media (max-width: 600px) {
+                margin: 10px;
+            }
+
+
+            .app-home-inbox-content {
+                text-align: center;
+                padding: 10px;
+                font-size: 15px;
+
+                @media (max-width: 600px) {
+                    padding: 4px;
+                }
+
+                .fist-bump {
+                    width: 100%;
+                    max-width: 320px;
+                }
+
+                .app-home-inbox-content-container {
+                    padding: 10px;
+                    border: 1px solid #dadeea;
+                    border-radius: 8px;
+                }
+            }
+
+            .app-home-inbox-header {
+                margin: 24px;
+                margin-bottom: 40px;
+                display: flex;
+                align-items: center;
+
+                h1 {
+                    font-family: sofia-pro;
+                    font-size: 18px;
+                    font-weight: 700;
+                    font-weight: bold;
+                    margin-left: 3px;
+                }
+
+                .arrow-down.open {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+
+    .app-home-header {
+        background-color: var(--clr-item-bg);
+        display: flex;
+        // grid-template-columns: 0.8fr 3fr;
+        height: 88px;
+        box-shadow: 9px 1px 12px #e6e9ef;
+
+        @media (max-width: 500px) {
+            svg {
+                display: none;
+            }
+        }
+
+
+        img {
+            display: inline;
+            overflow: hidden;
+        }
+
+        .header-container {
+            margin-left: 82px;
+            min-width: 250px;
+            justify-content: center;
+            display: flex;
+            width: fit-content;
+            flex-direction: column;
+
+            @media (max-width: 600px) {
+                margin-left: 20px;
+            }
+
+            @media (max-width: 450px) {}
+
+            h2 {
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+        }
+    }
+}

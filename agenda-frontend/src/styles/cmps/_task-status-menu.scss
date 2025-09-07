@@ -1,0 +1,32 @@
+.task-status-menu {
+    position: absolute;
+    font-size: 14px;
+    height: fit-content;
+    background-color: var(--clr-item-bg);
+    padding: 25px;
+    gap: 10px;
+    box-shadow: var(--box-shadow-medium);
+    border-radius: 8px;
+    z-index: 7;
+    display: flex;
+    flex-wrap: wrap;
+
+    .btn-status {
+        font-size: 14px;
+        text-align: center;
+        width: 150px;
+        height: 30px;
+        border-radius: 2px;
+        color: var(--clr-item-bg);
+    }
+
+    .working-on-it {background-color: var(--clr-workingOnIt);}
+    .stuck{background-color: var(--clr-stuck);}
+    .done{background-color: var(--clr-done);}
+    .empty-status{background-color: var(--clr-empty);}
+    .waiting-for-qa{background-color: var(--clr-waiting);}
+    .need-help{background-color: var(--clr-help);}
+    .pending{background-color: var(--clr-pending);}
+    
+
+}

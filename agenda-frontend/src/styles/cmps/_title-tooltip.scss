@@ -1,0 +1,68 @@
+// a.tooltip {
+//     border-bottom: 1px dashed;
+//     text-decoration: none;
+//   }
+//   a.tooltip:hover {
+//     cursor: help;
+//     position: relative;
+//   }
+//   a.tooltip span {
+//     display: none;
+//   }
+//   a.tooltip:hover span {
+//     border: #666 2px dotted;
+//     padding: 5px 20px 5px 5px;
+//     display: block;
+//     z-index: 100;
+//     background: #e3e3e3;
+//     left: 0px;
+//     margin: 15px;
+//     width: 300px;
+//     position: absolute;
+//     top: 15px;
+//     text-decoration: none;
+//   }
+
+.block {
+    
+}
+.tooltip {
+    position: absolute;
+    top: 0px;
+    // left: 15%;
+    font-size: 14px;
+    background: rgb(68, 67, 67);
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    // padding-top: 10px;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: rgb(68, 67, 67);
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .block:hover .tooltip {
+    // top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+   .block:hover span,
+  .block:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
