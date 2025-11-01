@@ -3,11 +3,11 @@ import { ReactComponent as DownArrowSvg } from '../assets/icons/down-arrow.svg'
 import { BiSearch } from 'react-icons/bi'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { useForm } from '../hooks/useForm'
-import { useState } from 'react'
+import { useEffect as useReactEffect, useState, useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import { addTask, updateBoard } from '../store/board/board.action'
 import { useFilter } from '../hooks/useFilter'
-import { NavLink, useParams } from 'react-router-dom'
+import { NavLink, useNavigate, useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import { ReactComponent as HomeIcon } from '../assets/icons/home-icon.svg'
 import { ReactComponent as StarIcon } from '../assets/icons/star.svg'
@@ -17,6 +17,7 @@ import { updateUser } from '../store/user/user.action'
 import { Fragment } from 'react'
 import { InviteMemberModal } from './board-invite-member-modal'
 import { PopUpModal } from './pop-up-modal'
+import { ReactComponent as BoardMenuSvg } from '../assets/icons/board-menu.svg'
 
 export const BoardHeader = ({ board }) => {
   const { title } = board
@@ -24,12 +25,17 @@ export const BoardHeader = ({ board }) => {
   const params = useParams()
   const dispatch = useDispatch()
   const loggedinUser = useSelector(state => state.userModule.loggedinUser)
+  const { boards } = useSelector(state => state.boardModule)
+  const navigate = useNavigate()
   const [isRenaming, setIsRenaming] = useState(false)
   const [renameTitle, handleChange] = useForm({ title: board.title })
   const [isDashboard, setIsDashboard] = useState(false)
   const [user, setUser] = useState(loggedinUser)
   const [isInviteMemberOpen, setIsInviteMemberOpen] = useState(false)
   const [guestFavBoards, setGuestFavBoards] = useState([])
+  const [headerModalName, setHeaderModalName] = useState(null)
+  const [isBoardSwitcherOpen, setIsBoardSwitcherOpen] = useState(false)
+  const switcherRef = useRef(null)
 
   useEffect(() => {
     if (params['*'] === `board/dashboard/${board._id}`) {
@@ -38,6 +44,17 @@ export const BoardHeader = ({ board }) => {
       setIsDashboard(false)
     }
   }, [params])
+
+  // Close board switcher on outside click
+  useReactEffect(() => {
+    if (!isBoardSwitcherOpen) return
+    const onBodyClick = (e) => {
+      if (!switcherRef.current) return setIsBoardSwitcherOpen(false)
+      if (!switcherRef.current.contains(e.target)) setIsBoardSwitcherOpen(false)
+    }
+    document.body.addEventListener('click', onBodyClick)
+    return () => document.body.removeEventListener('click', onBodyClick)
+  }, [isBoardSwitcherOpen])
 
   const changeBoardTitle = () => {
     setIsRenaming(!isRenaming)
@@ -100,14 +117,42 @@ export const BoardHeader = ({ board }) => {
               {(loggedinUser ? user?.favBoards?.includes(board._id) : guestFavBoards.includes(board._id)) ?
                 <StarClrIcon onClick={addBoardToFav} className="svg svg-star starred" title='Remove from favorites' />
                 : <StarIcon onClick={addBoardToFav} className="svg svg-star" title='Add to favorites' />}
+              {boards && boards.length > 0 && (
+                <div className="board-switcher-wrap" ref={switcherRef}>
+                  <button
+                    type="button"
+                    className="btn board-switcher-btn"
+                    onClick={(e) => { e.stopPropagation(); setIsBoardSwitcherOpen(prev => !prev) }}
+                    title="Switch board"
+                  >
+                    {title}
+                    <DownArrowSvg />
+                  </button>
+                  {isBoardSwitcherOpen && (
+                    <div className="board-switcher-menu">
+                      {boards.map(b => (
+                        <button
+                          key={b._id}
+                          className={`board-switcher-item ${b._id === board._id ? 'active' : ''}`}
+                          onClick={() => { setIsBoardSwitcherOpen(false); navigate(`/workspace/board/${b._id}`) }}
+                        >
+                          <span className="board-icon">{(b.title || 'B').slice(0,1)}</span>
+                          <span className="board-title">{b.title}</span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
               <div className="flex btns-container">
                 <button className="btn btn-svg invite" onClick={() => setIsInviteMemberOpen(true)}>
                   <InviteSvg />
                   <span>Invite</span>
                 </button>
-                {/* <button className="btn btn-svg menu">
-              <BoardMenuSvg />
-            </button> */}
+                <button className="btn btn-svg menu" onClick={() => setTimeout(() => setHeaderModalName('BOARD_OVERFLOW'), 100)}>
+                  <BoardMenuSvg />
+                </button>
+                {headerModalName && <PopUpModal board={board} setModalName={setHeaderModalName} modalName={headerModalName} />}
               </div>
             </div>
             <div className="board-header-nav-container">

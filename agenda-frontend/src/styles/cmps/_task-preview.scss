@@ -24,10 +24,7 @@
         // box-shadow: 0px 12px 11px -15px rgba(0, 0, 0, 0.49);
     }
 
-    &:hover .sticky-container {
-        background-color: #F4F5F8;
-        // box-shadow: 0px 12px 11px -15px rgba(0, 0, 0, 0.49);
-    }
+    
 
     &:hover .task-preview-priority {
         filter: opacity(.7);
@@ -99,8 +96,6 @@
         &:hover {
             cursor: pointer;
         }
-
-
     }
 
     .task-preview-status {
@@ -148,7 +143,6 @@
             justify-content: center;
         }
     }
-
 
     .task-preview-item h4:hover {
         outline: 1px solid var(--clr-disabled);
@@ -307,8 +301,6 @@
         }
     }
 
-
-
     .Workingonit {
         background-color: var(--clr-workingOnIt);
     }
@@ -348,7 +340,15 @@
     .Low {
         background-color: var(--clr-low);
     }
+}
 
+/* Quick Find highlight */
+.qf-highlight {
+    animation: qfFlash 1.2s ease-in-out 1;
+}
+@keyframes qfFlash {
+    0% { background-color: rgba(255, 235, 59, 0.2); }
+    100% { background-color: transparent; }
 }
 
 /* SMALL */
@@ -357,7 +357,6 @@
         height: 35px;
         text-overflow: ellipsis;
         white-space: none;
-
 
         li {
             display: flex;

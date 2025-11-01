@@ -13,7 +13,7 @@
     border: 1px solid var(--clr-disabled);
     
     @media (max-width: 450px) {
-        left: 0;
+        display: none;
     }
 
     &.closed {

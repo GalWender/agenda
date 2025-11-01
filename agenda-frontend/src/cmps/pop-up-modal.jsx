@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { ReactComponent as Trash } from '../assets/icons/trash-icon.svg'
-import { addGroup, loadTask, removeBoard, removeComment, removeGroup, removeTask, updateGroup, updateTask } from '../store/board/board.action'
+import { addGroup, addTask, loadTask, removeBoard, removeComment, removeGroup, removeTask, updateGroup, updateTask } from '../store/board/board.action'
 import { ReactComponent as TrashIcon } from '../assets/icons/trash-icon.svg'
 import { ReactComponent as PencilIcon } from '../assets/icons/pencil.svg'
 import { ReactComponent as LogoutSvg } from '../assets/icons/logout.svg'
@@ -156,6 +156,16 @@ export const PopUpModal = ({ modalName, setModalName, task, group, board, boards
     closeMenu()
   }
 
+  const onAddQuickTask = () => {
+    try {
+      const groupId = board.groups?.[0]?.id
+      if (!groupId) return closeMenu()
+      dispatch(addTask({ groupId, title: 'New Task', boardId: board._id }))
+    } finally {
+      closeMenu()
+    }
+  }
+
   const removeFile = () => {
     delete task['files']
     dispatch(updateTask({ task, groupId: group.id, boardId: board._id }))
@@ -278,6 +288,11 @@ export const PopUpModal = ({ modalName, setModalName, task, group, board, boards
     case 'NEW_TASK_MENU':
       return <section className='new-task-menu' onClick={(ev) => ev.stopPropagation()}>
         <div onClick={onAddGroup} className='new-task-menu-item'><NewGroupIcon /> <span>Add new group</span></div>
+      </section>
+    case 'BOARD_OVERFLOW':
+      return <section className='board-overflow-menu' onClick={(ev) => ev.stopPropagation()}>
+        <div className='new-task-menu-item' onClick={onAddQuickTask}><span style={{width:'16px',display:'inline-block',textAlign:'center'}}>+</span> <span>Add new task</span></div>
+        <div className='new-task-menu-item' onClick={onAddGroup}><NewGroupIcon /> <span>Add new group</span></div>
       </section>
     case 'FILE_MENU':
       return <section className='file-menu'>

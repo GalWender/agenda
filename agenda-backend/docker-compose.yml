@@ -1,0 +1,15 @@
+services:
+  api:
+    build:
+      context: .
+    image: agenda-backend:latest
+    container_name: agenda-backend
+    restart: unless-stopped
+    env_file:
+      - ./.env.production
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "8080:3030"
+    volumes:
+      - ./logs:/app/logs

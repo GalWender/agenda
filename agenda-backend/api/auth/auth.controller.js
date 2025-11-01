@@ -19,7 +19,9 @@ async function login(req, res) {
         // console.log('user form authService:', user)
         const loginToken = authService.getLoginToken(user)
         logger.info('User login: ', user)
-        res.cookie('loginToken', loginToken)
+        const isProd = process.env.NODE_ENV === 'production'
+        const cookieOptions = { httpOnly: true, sameSite: isProd ? 'none' : 'lax', secure: isProd }
+        res.cookie('loginToken', loginToken, cookieOptions)
         res.json(user)
     } catch (err) {
         logger.error('Failed to Login ' + err)
@@ -35,7 +37,9 @@ async function signup(req, res) {
         const user = await authService.login(username, password)
         const loginToken = authService.getLoginToken(user)
         logger.info('User login: ', user)
-        res.cookie('loginToken', loginToken)
+        const isProd = process.env.NODE_ENV === 'production'
+        const cookieOptions = { httpOnly: true, sameSite: isProd ? 'none' : 'lax', secure: isProd }
+        res.cookie('loginToken', loginToken, cookieOptions)
         res.json(user)
     } catch (err) {
         logger.error('Failed to signup ' + err)
@@ -45,7 +49,9 @@ async function signup(req, res) {
 
 async function logout(req, res) {
     try {
-        res.clearCookie('loginToken')
+        const isProd = process.env.NODE_ENV === 'production'
+        const cookieOptions = { httpOnly: true, sameSite: isProd ? 'none' : 'lax', secure: isProd }
+        res.clearCookie('loginToken', cookieOptions)
         res.send({ msg: 'Logged out successfully' })
     } catch (err) {
         res.status(500).send({ err: 'Failed to logout' })

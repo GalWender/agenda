@@ -39,7 +39,7 @@
     .group-content-title {
         padding-top: 0;
         position: sticky;
-        top: 170px;
+        top: 210px;
         display: flex;
         align-self: flex-start;
         padding-left: 7px;
@@ -50,7 +50,7 @@
         background-color: var(--clr-item-bg);
         
         @media (max-width: 450px) {
-            top: 150px;
+            top: 210px;
         }
 
         input {
@@ -122,7 +122,7 @@
     .group-content-header {
         padding-top: 40px;
         position: sticky;
-        top: 202px;
+        top: 242px;
         background-color: var(--clr-item-bg);
         z-index: 2;
         border: 1px solid var(--clr-disabled);
@@ -135,7 +135,7 @@
         display: flex;
         list-style-type: none;
         @media (max-width: 450px) {
-            top: 235px;
+            top: 242px;
         }
 
         .mask {
@@ -291,7 +291,7 @@
         padding-left: 0px;
 
         .group-content-header {
-            top: 185px;
+            top: 242px;
 
             .group-content-header-item {
                 min-width: 170px;

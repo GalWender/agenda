@@ -9,7 +9,7 @@
     grid-template-columns: var(--board-grid-column) 1fr;
 
     @media (max-width: 450px) {
-        grid-template-columns: calc(var(--board-grid-column) - 74px) 1fr;
+        grid-template-columns: 0 1fr;
         overflow: hidden;
     }
 }

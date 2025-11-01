@@ -73,7 +73,7 @@ export const GroupContent = ({ group, setIsHeaderOpen, isHeaderOpen, board, idx 
 
     return <Draggable key={group.id} draggableId={group.id} index={idx}>
         {(provided) => {
-            return <section className="group-content" ref={provided.innerRef}
+            return <section className="group-content" id={`group-${group.id}`} ref={provided.innerRef}
                 {...provided.draggableProps}
             >
                 <div className='group-content-title' {...provided.dragHandleProps}>

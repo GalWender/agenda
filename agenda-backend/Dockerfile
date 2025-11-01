@@ -1,16 +1,24 @@
+# syntax=docker/dockerfile:1
+FROM node:20-bookworm-slim AS base
 
-FROM node:16.17.0-alpine3.16
+WORKDIR /app
 
-WORKDIR /public
+ENV NODE_ENV=production \
+    PORT=3030
+
+# Install build tools for native deps like bcrypt, then remove them after install
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3 make g++ \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY package*.json ./
-
-RUN npm install
+RUN npm ci --omit=dev && npm cache clean --force
 
 COPY . .
 
-ENV PORT=3000 NODE_ENV=production
+# Remove build tools to reduce image size
+RUN apt-get purge -y python3 make g++ && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
-EXPOSE 3000
+EXPOSE 3030
 
-CMD [ "npm", "start"]
+CMD ["node", "server.js"]
